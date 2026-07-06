@@ -109,6 +109,4 @@ AnsemBullOverlay/
 
 ---
 
-## 📦 License
-
-MIT — Ansem Bull Labs, 2026 🟢🐂
+## 📦built by @ceicult
