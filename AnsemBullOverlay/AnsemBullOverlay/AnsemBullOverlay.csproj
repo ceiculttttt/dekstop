@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>AnsemBullOverlay</AssemblyName>
+    <RootNamespace>AnsemBullOverlay</RootNamespace>
+    <Version>1.2.0</Version>
+    <Company>Ansem Bull Labs</Company>
+    <Product>Ansem Bull Desktop Companion</Product>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Remove="System.Drawing" />
+    <Using Remove="System.Windows.Forms" />
+  </ItemGroup>
+
+  <!-- Bundled bull sprites -->
+  <ItemGroup>
+    <Resource Include="Assets\Bull\*.png" />
+  </ItemGroup>
+
+</Project>

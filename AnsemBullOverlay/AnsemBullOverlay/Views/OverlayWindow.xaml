@@ -1,0 +1,44 @@
+<Window x:Class="AnsemBullOverlay.Views.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ctl="clr-namespace:AnsemBullOverlay.Controls"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        Focusable="False"
+        Title="Ansem Bull Overlay"
+        UseLayoutRounding="False"
+        SnapsToDevicePixels="False">
+    <Grid x:Name="RootGrid" ClipToBounds="False">
+        <!-- Particle layer (candles / click bursts) -->
+        <ctl:ParticleHost x:Name="Particles"/>
+
+        <!-- Cursor trail: small bull-head sprites that fade -->
+        <Canvas x:Name="CursorTrailLayer" IsHitTestVisible="False"/>
+
+        <!-- Bull mascot layer -->
+        <Canvas x:Name="BullLayer" IsHitTestVisible="False">
+            <Image x:Name="Bull"
+                   Source="pack://application:,,,/Assets/Bull/bull-mascot.png"
+                   Stretch="Uniform"
+                   RenderOptions.BitmapScalingMode="HighQuality"
+                   IsHitTestVisible="False">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform x:Name="BullFlip" ScaleX="1" ScaleY="1" CenterX="100" CenterY="100"/>
+                        <TranslateTransform x:Name="BullBob" Y="0"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+                <Image.Effect>
+                    <DropShadowEffect x:Name="BullGlow" Color="#39FF14" BlurRadius="26" ShadowDepth="0" Opacity="0.85"/>
+                </Image.Effect>
+            </Image>
+        </Canvas>
+
+        <!-- Chat bubble layer (above everything) -->
+        <Canvas x:Name="ChatLayer" IsHitTestVisible="False"/>
+    </Grid>
+</Window>

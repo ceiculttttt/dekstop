@@ -1,0 +1,29 @@
+## HOW TO USE  (simplest possible)
+
+You unzipped this folder on your Windows PC. Now:
+
+┌──────────────────────────────────────────────────────────────┐
+│  1.  Double-click   Build-Exe.bat                            │
+│  2.  Wait ~1-2 minutes for it to build                       │
+│  3.  A file named   AnsemBullOverlay.exe                     │
+│      appears on your Desktop.                                │
+│  4.  From now on, just double-click that .exe. Done.         │
+└──────────────────────────────────────────────────────────────┘
+
+That's it. The .exe is fully self-contained -- copy it anywhere.
+
+CONTROLS:
+
+  * Click the bull on your desktop  ->  It says something random!
+
+  * Ctrl+Shift+B  = Bull charges across the screen
+  * Ctrl+Shift+R  = Rocket boost
+  * Ctrl+Shift+T  = Make the bull say something
+  * Ctrl+Shift+H  = Show / hide the overlay
+
+TRAY ICON (near the clock):
+  Right-click for the full menu.
+  Double-click to open the neon Config panel.
+
+TO QUIT:
+  Right-click the tray icon -> Exit.
